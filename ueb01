@@ -1,9 +1,7 @@
 #!/bin/sh
-
-# Erstelle Ordner, wenn nicht bereits vorhanden
+#Erstelle Ordner, wenn nicht bereits vorhanden! 
 mkdir -p files
-# Kopiere *.txt Dateien vom aktuellen Ordner in den Zielordner.
-# Unterdrücke Fehlermeldung wenn keine *
+#Kopiert txt Dateien in files Ordner! Error bei nicht vorhanden Dateien wird unterdrückt!
 cp -n *.txt files 2>/dev/null
+#Kopiert und sortiert der größe nach alle Dateien im files Ordner und schreibt diese in die myfiles Datei, welche im "akuellem Ordner" erstellt/überschrieben wird.
 cd files; ls -S -r >../myfiles
-
